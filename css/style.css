@@ -473,7 +473,7 @@ section { padding-block: clamp(2.5rem, 6vw, 5rem); }
 .product-body { padding: 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
 .product-body .category-tag { font-size: 0.72rem; font-weight: 700; color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.04em; }
 .product-body h3 { font-size: 1rem; }
-.product-body .rating { font-size: 0.85rem; color: var(--color-accent); }
+.product-body .rating { font-size: 0.85rem; color: #996000; }
 .product-body .rating span { color: var(--color-text-muted); }
 .product-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 0.5rem; }
 .price { font-weight: 800; font-size: 1.15rem; color: var(--color-text); }
@@ -577,7 +577,7 @@ section { padding-block: clamp(2.5rem, 6vw, 5rem); }
 @media (min-width: 800px) { .potd { grid-template-columns: 0.9fr 1.1fr; } }
 
 /* -------------------------------- Footer -------------------------------- */
-.site-footer { background: var(--color-text); color: #D9D9EC; padding-block: 3rem 1.5rem; }
+.site-footer h2, .site-footer h4 { color: #fff; margin-bottom: 0.9rem; font-size: 0.95rem; } 
 .footer-grid {
   display: grid;
   gap: 2rem;
