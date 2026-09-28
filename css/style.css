@@ -131,7 +131,7 @@ section { padding-block: clamp(2.5rem, 6vw, 5rem); }
 .btn-primary { background: var(--color-primary); color: #fff; box-shadow: var(--shadow-md); }
 .btn-primary:hover { background: var(--color-primary-dark); box-shadow: var(--shadow-lg); }
 
-.btn-secondary { background: var(--color-secondary); color: #fff; }
+.btn-secondary { background: #B9233A; color: #FFFFFF; }
 .btn-secondary:hover { filter: brightness(1.06); }
 
 .btn-outline { background: transparent; border-color: var(--color-primary); color: var(--color-primary); }
