@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart — Toy Haven</title>
+  <meta name="description" content="Review items in your Toy Haven cart, adjust quantities, and see your subtotal, delivery fee and grand total before checkout." />
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#145DA0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <section class="container header-inner">
+      <a class="brand" href="index.html">
+       <img src="images/logo.png" alt="Toy Haven Logo" class="brand-logo">
+      </a>
+      <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="cart.html">Cart</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+      <nav class="nav-actions">
+        <a class="btn-icon icon-badge" href="wishlist.html" aria-label="View wishlist">♥<span class="count is-hidden" data-wishlist-count>0</span></a>
+        <a class="btn-icon icon-badge" href="cart.html" aria-label="View cart">🛒<span class="count is-hidden" data-cart-count>0</span></a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </section>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Your cart</h1>
+        <p>Review your items before heading to checkout.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="cart-heading">
+      <div class="container">
+        <h2 class="visually-hidden" id="cart-heading">Cart contents</h2>
+
+        <section class="cart-layout">
+          <div>
+            <article class="form-card" id="cart-items-card">
+              <div id="cart-items"></div>
+              <section class="flex-between mt-lg" id="cart-actions" style="display:none;">
+                <button class="btn btn-ghost btn-sm" id="clear-cart-btn">Clear cart</button>
+                <a class="btn btn-outline btn-sm" href="products.html">Continue shopping</a>
+              </section>
+            </article>
+
+            <section class="empty-state" id="cart-empty" style="margin-top:1.5rem;">
+              <div class="icon" aria-hidden="true">🛒</div>
+              <h3>Your cart is empty</h3>
+              <p>Looks like you haven't added anything yet.</p>
+              <a class="btn btn-primary mt-lg" href="products.html">Browse products</a>
+            </section>
+          </div>
+
+          <aside class="form-card" id="cart-summary" aria-labelledby="summary-heading">
+            <h3 id="summary-heading">Order summary</h3>
+            <p class="summary-row"><span>Subtotal</span><span id="summary-subtotal">$0.00</span></p>
+            <p class="summary-row"><span>Delivery</span><span id="summary-delivery">$0.00</span></p>
+            <p class="summary-row total"><span>Grand total</span><span id="summary-total">$0.00</span></p>
+            <p class="summary-note" id="summary-note"></p>
+            <a class="btn btn-primary btn-block mt-lg" id="checkout-link" href="checkout.html">Proceed to checkout</a>
+          </aside>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <section class="footer-bottom">
+        <span>&copy; <span data-year></span> Toy Haven. University project — not a real store.</span>
+        <span>Built with HTML, CSS &amp; vanilla JavaScript.</span>
+      </section>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

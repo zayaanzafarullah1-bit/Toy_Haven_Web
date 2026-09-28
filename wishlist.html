@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist — Toy Haven</title>
+  <meta name="description" content="Track items you're interested in, already own, or aren't interested in. Move items straight to your Toy Haven cart." />
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#145DA0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <section class="container header-inner">
+      <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Toy Haven Logo" class="brand-logo">
+      </a>
+      <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="cart.html">Cart</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+      <nav class="nav-actions">
+        <a class="btn-icon icon-badge" href="wishlist.html" aria-label="View wishlist">♥<span class="count is-hidden" data-wishlist-count>0</span></a>
+        <a class="btn-icon icon-badge" href="cart.html" aria-label="View cart">🛒<span class="count is-hidden" data-cart-count>0</span></a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </section>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Your wishlist</h1>
+        <p>Keep track of what you want, what you own, and what's not for you.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="wishlist-heading">
+      <div class="container">
+        <h2 class="visually-hidden" id="wishlist-heading">Wishlist items</h2>
+
+        <section class="toolbar">
+          <div class="filter-group" role="group" aria-label="Filter by status">
+            <button class="chip" data-status="all">All</button>
+            <button class="chip" data-status="interested">Interested</button>
+            <button class="chip" data-status="owned">Owned</button>
+            <button class="chip" data-status="not-interested">Not interested</button>
+          </div>
+        </section>
+
+        <section class="product-grid" id="wishlist-grid"></section>
+
+        <section class="empty-state is-hidden" id="wishlist-empty">
+          <div class="icon" aria-hidden="true">♥</div>
+          <h3>Your wishlist is empty</h3>
+          <p>Tap the heart icon on any product to save it here.</p>
+          <a class="btn btn-primary mt-lg" href="products.html">Browse products</a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <section class="footer-bottom">
+        <span>&copy; <span data-year></span> Toy Haven. University project — not a real store.</span>
+        <span>Built with HTML, CSS &amp; vanilla JavaScript.</span>
+      </section>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/wishlist.js"></script>
+</body>
+</html>

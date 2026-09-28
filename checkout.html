@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Toy Haven</title>
+  <meta name="description" content="Complete your Toy Haven order: enter delivery details, choose a payment method, and confirm your order summary." />
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#145DA0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <section class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">TH</span>
+        Toy Haven
+      </a>
+      <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="cart.html">Cart</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+      <nav class="nav-actions">
+        <a class="btn-icon icon-badge" href="wishlist.html" aria-label="View wishlist">♥<span class="count is-hidden" data-wishlist-count>0</span></a>
+        <a class="btn-icon icon-badge" href="cart.html" aria-label="View cart">🛒<span class="count is-hidden" data-cart-count>0</span></a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </section>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Checkout</h1>
+        <p>Almost there — confirm your details to place the order.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="checkout-heading">
+      <div class="container">
+        <h2 class="visually-hidden" id="checkout-heading">Checkout form and order summary</h2>
+
+        <section class="cart-layout" id="checkout-view">
+          <form class="form-card" id="checkout-form" novalidate>
+            <h3>Delivery details</h3>
+
+            <section class="field" id="field-name">
+              <label for="cust-name">Full name</label>
+              <input type="text" id="cust-name" name="name" autocomplete="name" required />
+              <p class="error-msg">Please enter your full name.</p>
+            </section>
+
+            <section class="field" id="field-email">
+              <label for="cust-email">Email address</label>
+              <input type="email" id="cust-email" name="email" autocomplete="email" required />
+              <p class="error-msg">Please enter a valid email address.</p>
+            </section>
+
+            <section class="field" id="field-address">
+              <label for="cust-address">Delivery address</label>
+              <textarea id="cust-address" name="address" rows="3" required></textarea>
+              <p class="error-msg">Please enter a delivery address.</p>
+            </section>
+
+            <section class="field" id="field-payment">
+              <label>Payment method</label>
+              <div class="radio-group" role="radiogroup" aria-label="Payment method">
+                <label class="radio-option">
+                  <input type="radio" name="payment" value="card" checked />
+                  Credit / Debit card
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="payment" value="cod" />
+                  Cash on delivery
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="payment" value="wallet" />
+                  Digital wallet
+                </label>
+              </div>
+              <p class="error-msg">Please choose a payment method.</p>
+            </section>
+
+            <button class="btn btn-primary btn-block" type="submit">Place order</button>
+          </form>
+
+          <aside class="form-card" aria-labelledby="checkout-summary-heading">
+            <h3 id="checkout-summary-heading">Order summary</h3>
+            <div id="checkout-items"></div>
+            <p class="summary-row"><span>Subtotal</span><span id="checkout-subtotal">$0.00</span></p>
+            <p class="summary-row"><span>Delivery</span><span id="checkout-delivery">$0.00</span></p>
+            <p class="summary-row total"><span>Grand total</span><span id="checkout-total">$0.00</span></p>
+          </aside>
+        </section>
+
+        <section class="empty-state is-hidden" id="checkout-empty">
+          <div class="icon" aria-hidden="true">🛒</div>
+          <h3>Your cart is empty</h3>
+          <p>Add a few items before checking out.</p>
+          <a class="btn btn-primary mt-lg" href="products.html">Browse products</a>
+        </section>
+
+        <section class="success-panel is-hidden" id="checkout-success">
+          <div class="check-circle" aria-hidden="true">✓</div>
+          <h2>Order confirmed!</h2>
+          <p>Thank you — your order <strong id="order-number"></strong> has been placed.</p>
+          <p class="summary-note">A confirmation would normally be emailed to <span id="order-email"></span>.</p>
+          <a class="btn btn-primary mt-lg" href="products.html">Continue shopping</a>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <section class="footer-bottom">
+        <span>&copy; <span data-year></span> Toy Haven. University project — not a real store.</span>
+        <span>Built with HTML, CSS &amp; vanilla JavaScript.</span>
+      </section>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

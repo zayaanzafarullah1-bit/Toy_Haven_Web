@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback &amp; FAQ — Toy Haven</title>
+  <meta name="description" content="Share feedback about your Toy Haven order or browse answers to frequently asked questions about shipping, returns and product care." />
+ <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#145DA0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <section class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Toy Haven Logo" class="brand-logo">
+      </a>
+      <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="cart.html">Cart</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+      <nav class="nav-actions">
+        <a class="btn-icon icon-badge" href="wishlist.html" aria-label="View wishlist">♥<span class="count is-hidden" data-wishlist-count>0</span></a>
+        <a class="btn-icon icon-badge" href="cart.html" aria-label="View cart">🛒<span class="count is-hidden" data-cart-count>0</span></a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </section>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Feedback &amp; FAQ</h1>
+        <p>Tell us how we're doing, or find a quick answer below.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="feedback-heading">
+      <section class="container cart-layout">
+        <form class="form-card" id="feedback-form" novalidate aria-labelledby="feedback-heading">
+          <h2 id="feedback-heading" style="font-size:1.3rem;">Send feedback</h2>
+
+          <section class="field" id="field-fb-name">
+            <label for="fb-name">Your name</label>
+            <input type="text" id="fb-name" name="name" autocomplete="name" required />
+            <p class="error-msg">Please enter your name.</p>
+          </section>
+
+          <section class="field" id="field-fb-email">
+            <label for="fb-email">Email address</label>
+            <input type="email" id="fb-email" name="email" autocomplete="email" required />
+            <p class="error-msg">Please enter a valid email address.</p>
+          </section>
+
+          <section class="field" id="field-fb-rating">
+            <label for="fb-rating">How was your experience?</label>
+            <select id="fb-rating" name="rating">
+              <option value="5">Excellent</option>
+              <option value="4">Good</option>
+              <option value="3">Average</option>
+              <option value="2">Poor</option>
+              <option value="1">Very poor</option>
+            </select>
+          </section>
+
+          <section class="field" id="field-fb-message">
+            <label for="fb-message">Your message</label>
+            <textarea id="fb-message" name="message" rows="4" required></textarea>
+            <p class="error-msg">Please enter a message (at least 10 characters).</p>
+          </section>
+
+          <button class="btn btn-primary btn-block" type="submit">Submit feedback</button>
+          <p class="form-message" id="feedback-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <div>
+          <article class="form-card">
+            <h2 style="font-size:1.3rem;margin-bottom:0.5rem;">Frequently asked questions</h2>
+            <div id="faq-accordion">
+
+              <article class="accordion-item">
+                <h3>
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1">
+                    How long does delivery take?
+                    <span class="plus" aria-hidden="true">+</span>
+                  </button>
+                </h3>
+                <section class="accordion-panel" id="faq-1" role="region">
+                  <p>Standard delivery takes 3-5 working days. Orders over $75 ship free; smaller orders include a flat $4.99 delivery fee.</p>
+                </section>
+              </article>
+
+              <article class="accordion-item">
+                <h3>
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2">
+                    Can I return a diecast model or figurine?
+                    <span class="plus" aria-hidden="true">+</span>
+                  </button>
+                </h3>
+                <section class="accordion-panel" id="faq-2" role="region">
+                  <p>Yes — unopened items can be returned within 30 days. Display models with broken seals are assessed case-by-case.</p>
+                </section>
+              </article>
+
+              <article class="accordion-item">
+                <h3>
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3">
+                    Are the board games suitable for young children?
+                    <span class="plus" aria-hidden="true">+</span>
+                  </button>
+                </h3>
+                <section class="accordion-panel" id="faq-3" role="region">
+                  <p>Every board game listing shows a recommended age range and player count in its product details.</p>
+                </section>
+              </article>
+
+              <article class="accordion-item">
+                <h3>
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4">
+                    How do I track my wishlist items?
+                    <span class="plus" aria-hidden="true">+</span>
+                  </button>
+                </h3>
+                <section class="accordion-panel" id="faq-4" role="region">
+                  <p>Open the Wishlist page and mark each saved item as Interested, Owned, or Not interested — your choices are saved automatically.</p>
+                </section>
+              </article>
+
+              <article class="accordion-item">
+                <h3>
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5">
+                    Do you restock sold-out items?
+                    <span class="plus" aria-hidden="true">+</span>
+                  </button>
+                </h3>
+                <section class="accordion-panel" id="faq-5" role="region">
+                  <p>Most limited figurines and board games are restocked within a few weeks. Subscribe to our newsletter for restock alerts.</p>
+                </section>
+              </article>
+
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <section class="footer-bottom">
+        <span>&copy; <span data-year></span> Toy Haven. University project — not a real store.</span>
+        <span>Built with HTML, CSS &amp; vanilla JavaScript.</span>
+      </section>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/feedback.js"></script>
+</body>
+</html>

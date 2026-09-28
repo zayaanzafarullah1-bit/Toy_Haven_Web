@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toy Haven — Figurines, Toys, Board Games &amp; Diecast Cars</title>
+  <meta name="description" content="Toy Haven is your one-stop shop for collectible figurines, toys, board games and diecast model cars, with fast delivery and a happiness guarantee." />
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#145DA0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+  <section class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Toy Haven Home">
+      <img src="images/logo.png" alt="Toy Haven Logo" class="brand-logo">
+    </a>
+
+    <nav class="nav-menu" id="primary-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="wishlist.html">Wishlist</a>
+      <a href="cart.html">Cart</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+
+    <nav class="nav-actions">
+      <a class="btn-icon icon-badge" href="wishlist.html" aria-label="View wishlist">
+        ♥<span class="count is-hidden" data-wishlist-count>0</span>
+      </a>
+      <a class="btn-icon icon-badge" href="cart.html" aria-label="View cart">
+        🛒<span class="count is-hidden" data-cart-count>0</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </section>
+</header>
+
+  <main id="main">
+    <!-- ============================= HERO ============================= -->
+    <section class="hero">
+      <section class="container hero-grid">
+        <article class="hero-copy">
+          <span class="eyebrow-chip">New arrivals every week</span>
+          <h1>Where collectors and kids shop under one roof.</h1>
+          <p>Hand-picked figurines, board games, diecast cars and toys — built for display shelves, game nights and everything in between.</p>
+          <nav class="hero-actions">
+            <a class="btn btn-primary" href="products.html">Shop all products</a>
+            <a class="btn btn-outline" href="#why-us">Why Toy Haven</a>
+          </nav>
+          <section class="hero-stats">
+            <article><strong>20+</strong><span>Curated items</span></article>
+            <article><strong>4.6★</strong><span>Average rating</span></article>
+            <article><strong>4</strong><span>Collection categories</span></article>
+          </section>
+        </article>
+
+        <figure class="hero-slider">
+          <figure class="hero-slide">
+            <img src="images/banner1.jpg" alt="Collectible figurines lined up on a display shelf" data-name="Figurines banner" onerror="handleImageError(this)" />
+            <figcaption>Collectible Figurines</figcaption>
+          </figure>
+          <figure class="hero-slide">
+            <img src="images/banner2.jpg" alt="Colourful toys arranged for play" data-name="Toys banner" onerror="handleImageError(this)" />
+            <figcaption>Toys for every age</figcaption>
+          </figure>
+          <figure class="hero-slide">
+            <img src="images/banner3.jpg" alt="Friends playing a board game around a table" data-name="Board games banner" onerror="handleImageError(this)" />
+            <figcaption>Board Game Nights</figcaption>
+          </figure>
+          <figure class="hero-slide">
+            <img src="images/banner4.jpg" alt="Detailed diecast model car on a display base" data-name="Diecast banner" onerror="handleImageError(this)" />
+            <figcaption>Diecast Model Cars</figcaption>
+          </figure>
+          <nav class="hero-slider-dots"></nav>
+        </figure>
+      </section>
+    </section>
+
+    <!-- ============================= CATEGORIES ============================= -->
+    <section aria-labelledby="categories-heading">
+      <section class="container">
+        <header class="section-head" data-reveal>
+          <h2 id="categories-heading">Shop by category</h2>
+          <p>Four collections, one checkout.</p>
+        </header>
+        <nav class="category-grid" data-reveal>
+          <a class="category-card" href="products.html?category=figurines">
+            <span class="icon" aria-hidden="true">🗿</span>
+            <h3>Figurines</h3>
+            <span>Collectible statues &amp; action figures</span>
+          </a>
+          <a class="category-card" href="products.html?category=toys">
+            <span class="icon" aria-hidden="true">🧸</span>
+            <h3>Toys</h3>
+            <span>Play-tested favourites</span>
+          </a>
+          <a class="category-card" href="products.html?category=boardgames">
+            <span class="icon" aria-hidden="true">🎲</span>
+            <h3>Board Games</h3>
+            <span>Family &amp; strategy nights</span>
+          </a>
+          <a class="category-card" href="products.html?category=diecast">
+            <span class="icon" aria-hidden="true">🚗</span>
+            <h3>Diecast Cars</h3>
+            <span>Scaled to the last rivet</span>
+          </a>
+        </nav>
+      </section>
+    </section>
+
+    <!-- ============================= FEATURED PRODUCTS ============================= -->
+    <section aria-labelledby="featured-heading">
+      <section class="container">
+        <header class="flex-between section-head" data-reveal>
+          <hgroup>
+            <h2 id="featured-heading">Featured products</h2>
+            <p>A quick look at some shop favourites.</p>
+          </hgroup>
+          <a class="btn btn-outline" href="products.html">View all</a>
+        </header>
+        <section class="product-grid" id="featured-grid" data-reveal></section>
+      </section>
+    </section>
+
+    <!-- ============================= PRODUCT OF THE DAY ============================= -->
+    <section aria-labelledby="potd-heading">
+      <section class="container">
+        <header class="section-head" data-reveal>
+          <h2 id="potd-heading">Product of the day</h2>
+          <p>A new spotlight pick every 24 hours.</p>
+        </header>
+        <article class="potd" data-potd data-reveal>
+          <figure class="product-thumb">
+            <img data-potd-image src="images/products/galaxy-ranger.jpg" alt="Today's featured product" onerror="handleImageError(this)" />
+          </figure>
+          <section>
+            <span class="eyebrow-chip">Today's pick</span>
+            <h3 data-potd-name style="margin-top:0.75rem;font-size:1.5rem;"></h3>
+            <p data-potd-desc></p>
+            <section class="flex-between" style="margin-top:1.25rem;">
+              <span class="price" data-potd-price></span>
+              <button class="btn btn-primary" data-potd-add>Add to cart</button>
+            </section>
+          </section>
+        </article>
+      </section>
+    </section>
+
+    <!-- ============================= WHY CHOOSE US ============================= -->
+    <section id="why-us" aria-labelledby="why-heading">
+      <section class="container">
+        <header class="section-head center" data-reveal>
+          <h2 id="why-heading">Why choose Toy Haven</h2>
+          <p>Built by collectors, for collectors and families alike.</p>
+        </header>
+        <section class="feature-grid" data-reveal>
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">📦</span>
+            <h3>Careful packaging</h3>
+            <p>Every figurine and diecast model ships in protective foam-lined boxes.</p>
+          </article>
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">🔍</span>
+            <h3>Verified quality</h3>
+            <p>Each product is checked for paint accuracy and moving-part durability before listing.</p>
+          </article>
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">💬</span>
+            <h3>Real support</h3>
+            <p>Questions about scale, materials, or age range? Our feedback line reaches an actual human.</p>
+          </article>
+          <article class="feature-card">
+            <span class="icon" aria-hidden="true">↩️</span>
+            <h3>Easy wishlisting</h3>
+            <p>Track "Interested", "Owned" and "Not interested" items so your collection stays organised.</p>
+          </article>
+        </section>
+      </section>
+    </section>
+
+    <!-- ============================= NEWSLETTER ============================= -->
+    <section aria-labelledby="newsletter-heading">
+      <section class="container">
+        <article class="newsletter" data-reveal>
+          <section>
+            <h2 id="newsletter-heading">Get new arrivals first</h2>
+            <p>One email a week. No spam, just restocks and new drops.</p>
+          </section>
+          <section>
+            <form id="newsletter-form" novalidate>
+              <section class="newsletter-form">
+                <label class="visually-hidden" for="newsletter-email">Email address</label>
+                <input id="newsletter-email" type="email" placeholder="you@example.com" required />
+                <button class="btn btn-secondary" type="submit">Subscribe</button>
+              </section>
+              <p class="form-message" data-newsletter-message role="status" aria-live="polite"></p>
+            </form>
+          </section>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <section class="container">
+      <section class="footer-grid">
+        <section>
+          <h2>Toy Haven</h2>
+          <p style="color:#D7E5F2;">Figurines, toys, board games and diecast cars for every kind of collector.</p>
+        </section>
+        <nav>
+          <h2>Shop</h2>
+          <a href="products.html?category=figurines">Figurines</a>
+          <a href="products.html?category=toys">Toys</a>
+          <a href="products.html?category=boardgames">Board Games</a>
+          <a href="products.html?category=diecast">Diecast Cars</a>
+        </nav>
+        <nav>
+          <h2>Account</h2>
+          <a href="cart.html">Cart</a>
+          <a href="wishlist.html">Wishlist</a>
+          <a href="checkout.html">Checkout</a>
+        </nav>
+        <nav>
+          <h2>Support</h2>
+          <a href="feedback.html">Feedback &amp; FAQ</a>
+        </nav>
+      </section>
+      <section class="footer-bottom">
+        <span>&copy; <span data-year></span> Toy Haven. University project — not a real store.</span>
+        <span>Built with HTML, CSS &amp; vanilla JavaScript.</span>
+      </section>
+    </section>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js" data-page="home"></script>
+  <script>
+    // Homepage-only: render 8 featured products using shared card markup from products.js
+    document.addEventListener("DOMContentLoaded", () => {
+      const grid = document.getElementById("featured-grid");
+      const featured = PRODUCTS.filter((p) => p.badge).concat(PRODUCTS).slice(0, 8);
+      const unique = [...new Map(featured.map((p) => [p.id, p])).values()].slice(0, 8);
+      grid.innerHTML = unique.map(renderProductCard).join("");
+      attachProductCardEvents(grid);
+    });
+  </script>
+</body>
+</html>
